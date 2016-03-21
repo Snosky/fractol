@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/19 22:07:14 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/21 15:55:27 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/21 16:11:38 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@
 
 # define WIN_SX 1280
 # define WIN_SY 1024
-# define MAXITE 2000
+# define MAXITE 200
 
 # define MLX_REFRESH 1
 # define MLX_EXIT -1
 # define MLX_WAIT 0
+
+# define MOUSE_UNLOCK 1
+# define MOUSE_LOCK 0
 
 # define ZOOM 1.01
 
@@ -66,6 +69,7 @@ typedef struct	s_env
 	t_px	off;
 	double	cr;
 	double	ci;
+	int		mouse_status;
 }				t_env;
 
 t_env	*init_env(char *name);

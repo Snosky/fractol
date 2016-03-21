@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/20 13:40:36 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/20 23:47:31 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/21 16:11:12 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ t_env	*init_env(char *name)
 	env->frac_name = ft_strdup(name);
 	env->off.x = -100;
 	env->off.y = -100;
+	env->mouse_status = MOUSE_UNLOCK;
 	return (env);
 }
