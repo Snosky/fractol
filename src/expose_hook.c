@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_valid_fractal.c                                :+:      :+:    :+:   */
+/*   expose_hook.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
+/*   By: tpayen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/20 13:56:19 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/21 15:00:21 by tpayen           ###   ########.fr       */
+/*   Created: 2016/03/21 15:16:09 by tpayen            #+#    #+#             */
+/*   Updated: 2016/03/21 15:17:30 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fractol.h>
 
-char	**get_valid_fractals(void)
+int		expose_hook(t_env *env)
 {
-	return (ft_strsplit("julia;mandelbrot;douady", ';'));
+	mlx_put_image_to_window(env->mlx, env->win, env->img.img, 0, 0);
+	return (0);
 }

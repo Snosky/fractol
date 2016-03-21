@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/20 14:30:36 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/20 18:19:34 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/21 15:57:22 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,7 @@ void	frac_mandelbrot(t_env *env)
 			frac.zi = 0;
 			frac.i = 0;
 			frac_calc(&frac, frac.cr, frac.ci);
-			if (frac.i == MAXITE)
-				ft_put_px_img(env, frac.px.x, frac.px.y, 0x00000000);
-			else
-				ft_put_px_img(env, frac.px.x, frac.px.y, rgba(0, 0, frac.i * 255 / MAXITE, 0));
+			frac_put_px(env, frac);
 			frac.px.y++;
 		}
 		frac.px.x++;

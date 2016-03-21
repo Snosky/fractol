@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 15:17:50 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/20 23:35:47 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/21 15:17:57 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ int			main(int ac, char **av)
 		mlx_key_hook(env->win, key_hook, env);
 		mlx_loop_hook(env->mlx, loop_hook, env);
 		mlx_mouse_hook(env->win, mouse_hook, env);
-		mlx_hook(env->win, MotionNotify, PointerMotionMask, mouse_move, env);
+		mlx_hook(env->win, 6, 64, mouse_move, env);
+		mlx_expose_hook(env->win, expose_hook, env);
 		mlx_loop(env->mlx);
 		return (0);
 

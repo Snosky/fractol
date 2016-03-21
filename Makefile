@@ -26,6 +26,7 @@ SRC_FILES = main.c					\
 			key_hook.c				\
 			mouse_hook.c			\
 			mouse_move.c			\
+			expose_hook.c			\
 			rgba.c					\
 			ft_put_px_img.c			\
 			init_env.c				\
@@ -35,6 +36,7 @@ SRC_FILES = main.c					\
 			frac_julia.c			\
 			frac_mandelbrot.c		\
 			frac_douady.c			\
+			frac_put_px.c			\
 
 DIRS = $(OBJDIR)
 
@@ -44,7 +46,7 @@ all: directories $(EXEC)
 
 $(EXEC): $(SRC_OBJ)
 	@($(MAKE) -C $(LIBFTDIR))
-	$(CC) -o $@ $^ $(LIBS) -lmlx -lXext -lX11 -g
+	$(CC) -o $@ $^ $(LIBS) -lmlx -framework OpenGL -framework Appkit
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
 	$(CC) -o $@ -c $< $(CFLAGS) $(INCLUDES)

@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/20 14:18:17 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/20 18:41:04 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/21 14:58:33 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	frac_init(t_env *env, char *frac)
 		frac_mandelbrot(env);
 	else if (ft_strcmp(frac, "douady") == 0)
 		frac_douady(env);
-	mlx_put_image_to_window(env->mlx, env->win, env->img.img, 0, 0);	
+	mlx_put_image_to_window(env->mlx, env->win, env->img.img, 0, 0);
 }

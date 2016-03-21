@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/20 17:28:23 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/20 23:51:59 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/21 14:59:08 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int		mouse_hook(int button, int x, int y, t_env *env)
 			/ ZOOM - (y - WIN_SX / 2) * (1 - (1 / ZOOM)) + ZOOM;
 		env->status = MLX_REFRESH;
 	}
-	return (0);	
+	return (0);
 }

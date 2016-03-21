@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/20 14:19:55 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/20 23:44:36 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/21 15:57:10 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	frac_julia(t_env *env)
 	frac.x1 = -1;
 	frac.y1 = -1.2;
 	frac.px.x = 0;
-	//env->cr = 0.285;
-	//env->ci = 0.01;
+	env->off.x = WIN_SX / 4 * -1;
 	while (frac.px.x < WIN_SX)
 	{
 		frac.px.y = 0;
@@ -29,10 +28,7 @@ void	frac_julia(t_env *env)
 			frac.zr = (frac.px.x + env->off.x) / env->zoom + frac.x1;
 			frac.zi = (frac.px.y + env->off.y) / env->zoom + frac.y1;
 			frac_calc(&frac, env->cr, env->ci);
-			if (frac.i == MAXITE)
-				ft_put_px_img(env, frac.px.x, frac.px.y, 0x00FFFFFF);
-			else
-				ft_put_px_img(env, frac.px.x, frac.px.y, rgba(255, 0, frac.i * 255 / MAXITE, 0));
+			frac_put_px(env, frac);
 			frac.px.y++;
 		}
 		frac.px.x++;
