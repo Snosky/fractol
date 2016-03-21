@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/12 16:43:28 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/12 17:05:06 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/21 17:06:21 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strimp(char **tab, char *s)
 	char	*ret;
 	int		i;
 
-	i =	0;
+	i = 0;
 	ret = NULL;
 	while (tab[i])
 	{
